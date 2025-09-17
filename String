@@ -1,0 +1,4 @@
+# using list comprehension
+text = "Hello World"
+count = sum(1 for char in text if char.lower() in "aeiou")
+print("Number of vowels:", count) 

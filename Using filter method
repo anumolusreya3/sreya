@@ -1,0 +1,4 @@
+# Reverse a string using filter
+text = "Hello World"
+count = len(list(filter(lambda c: c.lower() in "aeiou", text)))
+print("Number of vowels:", count)
