@@ -1,0 +1,5 @@
+def show_details(*args, **kwargs):
+    print("Args:", args)
+    print("Kwargs:", kwargs)
+
+show_details(10, 20, 30, name="Sreya", age=21)
