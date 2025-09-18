@@ -1,0 +1,9 @@
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def show(self):  
+        return f"My name is {self.name}"
+
+s1 = Student("Sreya")
+print(s1.show())
