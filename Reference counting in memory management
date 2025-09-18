@@ -1,0 +1,10 @@
+import sys
+
+a = [1, 2, 3]
+print(sys.getrefcount(a))  
+
+b = a
+print(sys.getrefcount(a))  
+
+del b
+print(sys.getrefcount(a))  
