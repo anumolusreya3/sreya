@@ -1,0 +1,15 @@
+import gc
+
+class Node:
+    def __init__(self):
+        self.ref = None
+
+a = Node()
+b = Node()
+a.ref = b
+b.ref = a  
+
+del a
+del b  
+
+gc.collect() 
