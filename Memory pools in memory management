@@ -1,0 +1,7 @@
+import gc
+
+print("GC enabled?", gc.isenabled())  
+gc.disable()
+print("GC enabled?", gc.isenabled())  
+gc.enable()
+print("GC enabled?", gc.isenabled())  
