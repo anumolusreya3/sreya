@@ -1,0 +1,3 @@
+animals = [Dog(), Cat()]
+for a in animals:
+    print(a.speak())
