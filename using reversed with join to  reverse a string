@@ -1,0 +1,4 @@
+# using reversed() with join
+text = "Python"
+rev = "".join(reversed(text))
+print(rev)

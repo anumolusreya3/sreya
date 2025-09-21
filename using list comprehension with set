@@ -1,0 +1,5 @@
+# Remove duplicates from a list using list compehension with set()
+my_list = [1, 2, 2, 3, 4, 4, 5]
+seen = set()
+unique_list = [x for x in my_list if not (x in seen or seen.add(x))]
+print(unique_list) 
