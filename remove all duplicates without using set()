@@ -1,7 +1,7 @@
 def remove_duplicates(nums):
     unique = []
     for n in nums:
-        if n not in unique:   # check manually
+        if n not in unique:   
             unique.append(n)
     return unique
 
