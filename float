@@ -1,0 +1,6 @@
+print("\n=== Floats ===")
+f1 = 3.14
+f2 = 0.1 + 0.2
+
+print(f"f1 = {f1}, memory size = {sys.getsizeof(f1)} bytes")
+print(f"f2 = 0.1 + 0.2 = {f2}")
