@@ -1,0 +1,5 @@
+x = 10, memory size = 28 bytes
+y = 1000, memory size = 28 bytes
+big_num = 123456789012345678901234567890, memory size = 60 bytes
+a is b: True
+c is d: False
