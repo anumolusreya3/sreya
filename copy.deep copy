@@ -1,0 +1,8 @@
+import copy
+
+list1 = [[1, 2], [3, 4]]
+deep = copy.deepcopy(list1)
+
+deep[0][0] = 99
+print("Original:", list1)  
+print("Deep:", deep) 
