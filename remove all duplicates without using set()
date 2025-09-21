@@ -1,0 +1,12 @@
+def remove_duplicates(nums):
+    unique = []
+    for n in nums:
+        if n not in unique:   # check manually
+            unique.append(n)
+    return unique
+
+
+# Example
+numbers = [1, 2, 3, 2, 4, 1, 5, 3, 6]
+print("Original:", numbers)
+print("Without duplicates:", remove_duplicates(numbers))
