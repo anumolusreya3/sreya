@@ -1,0 +1,4 @@
+# using slicing ( most pythonic )
+text = "Python"
+rev = text[::-1]
+print(rev)
