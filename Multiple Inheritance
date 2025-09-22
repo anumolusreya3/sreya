@@ -1,0 +1,21 @@
+# Parent class 1
+class Father:
+    def skills(self):
+        print("Father: Gardening, Carpentry")
+
+# Parent class 2
+class Mother:
+    def skills(self):
+        print("Mother: Cooking, Painting")
+
+# Child class inheriting from both Father and Mother
+class Child(Father, Mother):
+    def skills(self):
+        
+        super().skills()   
+        Mother.skills(self)
+        print("Child: Dancing, Coding")
+
+# Create object
+c = Child()
+c.skills()
