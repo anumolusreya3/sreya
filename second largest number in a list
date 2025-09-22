@@ -1,0 +1,19 @@
+def second_largest(nums):
+    if len(nums) < 2:
+        return None 
+    first = second = float('-inf')  
+    
+    for num in nums:
+        if num > first:
+            second = first
+            first = num
+        elif num > second and num != first:
+            second = num
+    
+    if second == float('-inf'):
+        return None 
+    return second
+
+# Example
+numbers = [4, 7, 1, 9, 2, 9]
+print("Second largest:", second_largest(numbers))

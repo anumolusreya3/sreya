@@ -1,0 +1,13 @@
+def my_max(numbers):
+    if not numbers:
+        return None  
+    
+    maximum = numbers[0]  
+    for num in numbers[1:]:
+        if num > maximum:
+            maximum = num
+    return maximum
+
+# Example usage
+nums = [4, 7, 1, 9, 2, 5]
+print("Maximum value is:", my_max(nums))

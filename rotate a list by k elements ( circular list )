@@ -1,0 +1,19 @@
+def rotate_list(lst, k):
+    n = len(lst)
+    k = k % n  
+    
+    # Store last k elements
+    temp = lst[-k:] if k != 0 else []
+    
+    # Shift the rest of the elements to the right
+    for i in range(n - 1, k - 1, -1):
+        lst[i] = lst[i - k]
+    
+    # Put the last k elements at the start
+    for i in range(k):
+        lst[i] = temp[i]
+
+# Example
+numbers = [1, 2, 3, 4, 5, 6, 7]
+rotate_list(numbers, 3)
+print(numbers)
