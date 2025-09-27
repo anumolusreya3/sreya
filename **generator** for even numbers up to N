@@ -1,0 +1,7 @@
+def even_numbers(N):
+    for num in range(0, N+1, 2):  
+        yield num
+
+# Example usage
+for n in even_numbers(20):
+    print(n, end=" ")
