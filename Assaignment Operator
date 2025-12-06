@@ -1,0 +1,19 @@
+a = 35
+
+a += 10   
+print(a)
+
+a -= 5   
+print(a)
+
+a *= 6
+print(a)
+
+a /= 25
+print(a)
+
+a %= 30
+print(a)
+
+a **= 40
+print(a)
