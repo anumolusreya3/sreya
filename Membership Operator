@@ -1,0 +1,5 @@
+numbers = [20, 30, 40, 25]
+
+print(20 in numbers)
+print(50 in numbers)
+print(100 not in numbers)
