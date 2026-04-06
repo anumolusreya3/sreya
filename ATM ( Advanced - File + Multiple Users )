@@ -1,0 +1,66 @@
+import json
+
+def save_data(users):
+    with open("users.json", "w") as f:
+        json.dump(users, f)
+def load_data():
+    try:
+        with open("users.json", "r") as f:
+            return json.load(f)
+    except:
+        return {}
+class ATM:
+    def __init__(self):
+        self.users = load_data()
+
+    def create_account(self):
+        name = input("Enter name: ")
+        pin = input("Set PIN: ")
+        self.users[name] = {"pin": pin, "balance": 0}
+        save_data(self.users)
+        print("Account created")
+
+    def login(self):
+        name = input("Enter name: ")
+        pin = input("Enter PIN: ")
+
+        if name in self.users and self.users[name]["pin"] == pin:
+            print("Login success")
+            self.menu(name)
+        else:
+            print("Invalid details")
+    def menu(self, name):
+        while True:
+            print("\n1. Balance\n2. Deposit\n3. Withdraw\n4. Exit")
+            choice = int(input("Choice: "))
+
+            if choice == 1:
+                print("Balance:", self.users[name]["balance"])
+
+            elif choice == 2:
+                amt = int(input("Amount: "))
+                self.users[name]["balance"] += amt
+                save_data(self.users)
+
+            elif choice == 3:
+                amt = int(input("Amount: "))
+                if amt <= self.users[name]["balance"]:
+                    self.users[name]["balance"] -= amt
+                    save_data(self.users)
+                else:
+                    print("Insufficient balance")
+
+            elif choice == 4:
+                break
+atm = ATM()
+
+while True:
+    print("\n1. Create Account\n2. Login\n3. Exit")
+    ch = int(input("Enter: "))
+
+    if ch == 1:
+        atm.create_account()
+    elif ch == 2:
+        atm.login()
+    else:
+        break
